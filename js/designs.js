@@ -41,9 +41,3 @@ $('table').on('dblclick', "td", function () { // erase function which sets the b
 function resetColor() {
   $('td').css({"background-color": ""});
 }
-
-function printImage() {
-  let canvas = document.getElementById('canvas');
-  let image = canvas.toDataURL();
-  console.log(image)
-}
