@@ -1,108 +1,152 @@
 body {
-    text-align: center;
+    background-image: url("../img/background.jpg");
 }
-
+.container {
+    padding: 0px;
+    margin: 0px;
+}
 h1 {
-    box-shadow: 3px 3px 18px rgb(161, 160, 160);
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
+    font-family: 'Finger Paint', cursive;
+    font-size: 30px;
+    color: teal;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
 }
-
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1em 0 0.25em;
+.input__div {
+    width: 100%;
+    margin: auto;
 }
-
-h2:first-of-type {
-    margin-top: 0.5em;
+hr {
+    width: 100%;
+    color: teal;
+    margin-top: 20px;
 }
-
-table,
-tr,
-td {
-    border: 1px solid black;
+.tools {
+    width: 90%;
+    border: 1px solid teal;
+    padding: 5px;
+    box-shadow: 8px 8px 15px rgb(165, 165, 165);
+    padding: 5px;
 }
-
-table {
-  max-width: 90%;
-  box-shadow: 4px 4px 15px rgb(185, 185, 185);
-    border-collapse: collapse;
-    margin: 0 auto;
+.tools__head {
+    color: teal;
+    text-align: center;
+    font-size: 22px;
+    line-height: 0px;
+    font-family: 'Patrick Hand', cursive;
 }
-
-tr {
- height: 0px;
-}
-
-td {
-    height: 20px;
-  width: 20px;
-
-}
-
-input[type=number] {
-    width: 10em;
-    box-shadow: 4px 4px 15px rgb(168, 168, 168);
-}
-.button {
-  padding: 10px;
-  border: 1px solid rgb(194, 194, 194);
-  background-color: white;
-  box-shadow: 4px 4px 15px rgb(168, 168, 168);
-  border-radius: 4px;
-}
-.button:hover {
-    box-shadow: 1px 1px 3px grey;
-    transition: ease-in-out;
-    transition-duration: 0.4s;
-    transition-delay: initial;
+.paint__tools {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 10px;
+    font-family: 'Patrick Hand', cursive;
     
 }
-.input {
-  padding: 10px;
-  border: 1px solid grey;
-  border-radius: 2px;
+.tool {
+    width: 60px;
 }
-.input:hover {
-    box-shadow: 2px 2px 5px grey;
-    transition: ease-in-out;
-    transition-delay: initial;
-    transition-duration: 0.4s;
+#canvas {
+    width: 85%;
+    height: auto;
+    float: right;
 }
-.form-div {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+input[type=button], input[type=reset] {
+    padding: 5px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    background-color: teal;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: normal;
+    box-shadow: 5px 5px 15px grey;
 }
-.author {font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    text-align: right;
-    margin-right: 50px;
+input[type=number] {
+    width: 100px;
+    padding: 5px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid teal;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px grey;
 }
-.background {
-    background-color: "";
+#submitBtn {
+    background-color: green;
 }
-
-.resetColor {
-    margin-bottom: 15px;
+#resetBtn {
+    background-color: rgb(245, 75, 75);
+    border: 1px solid red;
+}
+#heading__hr {
+    width: 40%;
+}
+.fas {
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+    color: grey;
+}
+.fa-paint-brush {
+    color: blue;
+}
+.fa-window-close {
+    color: red;
+}
+.fa-undo {
+    color: red;
+}
+.fa-eye-dropper {
+    color: purple;
 }
 li {
-    text-indent: 5px;
-    list-style: decimal;
-    list-style-position: initial;
-}
-#instruction {
-    border: 1px solid rgb(168, 168, 168);
-    box-shadow: 4px 5px 15px rgb(190, 190, 190);
-    padding: 10px;
-    text-align: left;
-    max-width: 500px;
+    list-style-type: none;
+    display: inline-block;
+    font-family: 'Patrick Hand', cursive;
+    padding: 5px;
     margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-variant: normal;
-    
-    
 }
-.details__div {
-    cursor: pointer;
-    font-size: 20px;
+#colorPicker {
+    width: 50px;
+    height: 30px;
 }
+
+.tools__div {
+    position: relative;
+    width: 95%;
+    margin: auto;
+}
+@media screen and (min-width: 360px) and (max-width: 699px) {
+    .tools {
+        width: 360px;
+        margin: auto;
+    }
+}
+ @media screen and (min-width: 700px) and (max-width: 1000px) {
+     .tools {
+         width: 650px;
+         margin: auto;
+     }
+     .paint__tools {
+         margin-left: 150px;
+     }
+ }
+ @media screen and (min-width: 1001px) {
+     h1 {
+         font-size: 50px;
+     }
+     input[type=number], input[type=button] {
+         margin-top: 10px;
+     }
+     .paint__tools {
+         display: flex;
+         flex-direction: column;
+     }
+     .tool {
+         padding: 5px;
+         margin: auto;
+     }
+     .tools {
+         width: 100px;
+     }
+ }

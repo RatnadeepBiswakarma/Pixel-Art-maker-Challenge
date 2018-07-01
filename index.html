@@ -3,50 +3,54 @@
 <head>
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
-    <p class="author">: a project by Ratnadeep</p>
-    <details class="details__div">
-        <summary>Instruction</summary>
-        <div id="instruction">
-            <h3>Instruction:</h3>
-            <ul>
-                <li>First select the grid height and width and click on Submit.</li>
-                <li>To delete and take new table click on Reset</li>
-                <li>Pick and change any color by clicking on the color picker.</li>
-                <li>To erase a color Double click on the cell.</li>
-                <li>To reset total table color click on Reset Color button.</li>
-            </ul>
+    <div class="container">
+        <h1 class="name">Pixel Art Maker</h1>
+        <hr id="heading__hr">
+        <div class="tools">
+            <div class="input__div">
+                <input type="number" name="height" min="1" max="100" placeholder="Height" id="inputHeight">
+                <input type="number" name="width" min="1" max="100" placeholder="Width" id="inputWidth">
+                <input type="button" value="Submit" id="submitBtn">
+                <input type="reset" value="Clear" id="resetBtn">
+            </div>
+            <hr>
+            <div class="tools__div">
+                <p class="tools__head">Tools</p>
+                <div class="paint__tools">
+                    <div class="tool eye__droper">
+                        <i class="fas fa-eye-dropper"></i>
+                        <br>Dropper
+                    </div>
+                    <div class="tool paint__brush">
+                        <i class="fas fa-paint-brush"></i>
+                        <br>Brush
+                    </div>
+                    <div class="tool close">
+                        <i class="fas fa-window-close"></i>
+                        <br>Delete
+                    </div>
+                    <div class="tool reset">
+                        <i class="fas fa-undo"></i>
+                        <br>Reset
+                    </div>
+                    <div class="tool colorPicker">
+                        <input type="color" name="Color Picker" id="colorPicker">
+                        <br>Colors
+                    </div>
+                </div>
+            </div>
         </div>
-    </details>
-
-
-
-    <h2>Choose Grid Size</h2>
-    <form class="form-div" id="sizePicker">
-        Grid Height:
-        <input type="number" class="input" id="inputHeight" name="height" min="1" max="100" value="1"> Grid Width:
-        <input type="number" class="input" id="inputWeight" name="width" min="1" max="100" value="1">
-        <input type="button" value="Submit" class="makeGrid button">
-
-
-    </form>
-
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
-
-
-    <h2>Design Canvas</h2>
-    <hr>
-    <input type="button" class="button" id="resetColor" value="Reset Color" onclick="resetColor()">
-    <input type="button" class="button" value="Reset Table" onclick="removeTable()">
-    <input type="button" value="Save" class="save__button" onclick="printImage()">
-    <hr width="30%">
-    <table id="pixelCanvas"></table>
+        <table id="canvas"></table>
+    </div>
 
     <script src="js/designs.js"></script>
 </body>
