@@ -45,6 +45,7 @@ hr {
 }
 .tool {
     width: 60px;
+    color: rgb(99, 99, 99);
 }
 #canvas {
     width: 85%;
@@ -85,7 +86,6 @@ input[type=number] {
     font-size: 25px;
     margin: auto;
     text-align: center;
-    color: grey;
 }
 .fa-paint-brush {
     color: blue;
@@ -116,9 +116,9 @@ li {
     width: 95%;
     margin: auto;
 }
-@media screen and (min-width: 360px) and (max-width: 699px) {
+@media screen and (min-width: 460px) and (max-width: 699px) {
     .tools {
-        width: 360px;
+        width: 460px;
         margin: auto;
     }
 }
