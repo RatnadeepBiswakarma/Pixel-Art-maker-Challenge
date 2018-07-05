@@ -13,10 +13,12 @@ function checkStatus() {
   }
 }
 //  table creating function
+
 function makeGrid() {
-  hasTable = true;
   $('.paint__tools').css("display", "flex");
   $('.tools__head').css("display", "block");
+  $('.input__div').css("display", "none");
+  $('#divider').css("display", "none");
   removeTable(); // reset the Grid
   let canvasHeight = $('#inputHeight').val(); // assign input height to canvasHeight variable.
   let canvasWidth = $('#inputWidth').val(); // asssign input width to canvasWidth variable.
@@ -99,7 +101,12 @@ $('table').on('mousemove', 'td', function () { // color picker function.
 //  delete table function 
 
 $('.close').on("click", function () {
+  hasTable = false;
   $('#canvas').empty();
+  $('.paint__tools').css("display", "none");
+  $('.tools__head').css("display", "none");
+  $('.input__div').css("display", "block");
+  $('#divider').css("display", "block");
 });
 
 // color reset function
