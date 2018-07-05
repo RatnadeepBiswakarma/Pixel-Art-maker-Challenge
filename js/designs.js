@@ -1,17 +1,14 @@
-let hasTable = false;
+
 $('#submitBtn').click(function () {
-  checkStatus();
+  makeGrid();
 });
 // alert fucntion for existing table
-function checkStatus() {
-  if (hasTable == true) {
-    if (confirm("Are your sure? This will Reset all progress you made.")) {
-      makeGrid();
-    }
-  } else {
+$('#inputWidth').on("keydown", function (e) {
+  let key = e.keyCode;
+  if (key === 13) {
     makeGrid();
   }
-}
+});
 //  table creating function
 
 function makeGrid() {
@@ -114,9 +111,3 @@ $('.reset').on("click", function () {
 
 // event listener for enter key to trigger the submit button 
 
-$('#inputWidth').on("keydown", function (e) {
-  let key = e.keyCode;
-  if (key === 13) {
-    checkStatus();
-  }
-});
