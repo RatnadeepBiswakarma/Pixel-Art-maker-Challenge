@@ -15,14 +15,13 @@ function checkStatus() {
 //  table creating function
 
 function makeGrid() {
-  $('.paint__tools').css("display", "flex");
-  $('.tools__head').css("display", "block");
-  $('.input__div').css("display", "none");
-  $('#divider').css("display", "none");
+
   removeTable(); // reset the Grid
   let canvasHeight = $('#inputHeight').val(); // assign input height to canvasHeight variable.
   let canvasWidth = $('#inputWidth').val(); // asssign input width to canvasWidth variable.
   if ((canvasHeight != "") && (canvasWidth != "")) {
+    $('.input__div').css("display", "none");
+    $('.tools').css("display", "initial");
     for (i = 0; i < canvasHeight; i++) {
       $('#canvas').append('<tr></tr>'); // add table row to the table.
       for (j = 0; j < canvasWidth; j++) {
@@ -103,10 +102,8 @@ $('table').on('mousemove', 'td', function () { // color picker function.
 $('.close').on("click", function () {
   hasTable = false;
   $('#canvas').empty();
-  $('.paint__tools').css("display", "none");
-  $('.tools__head').css("display", "none");
-  $('.input__div').css("display", "block");
-  $('#divider').css("display", "block");
+  $('.input__div').css("display", "");
+  $('.tools').css("display", "none");
 });
 
 // color reset function
