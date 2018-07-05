@@ -1,6 +1,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
@@ -13,44 +16,57 @@
 
 <body>
     <div class="container">
-        <h1 class="name">Pixel Art Maker</h1>
+        <h1 class="name" title="Pixel Art Maker porject by Ratnadeep Biswakarma.">Pixel Art Maker</h1>
+        <hr id="heading__hr">
+        <div class="coder__tag">
+            <p>Made with
+                <span>♥</span> by Ratadeep</p>
+        </div>
         <hr id="heading__hr">
         <div class="tools">
             <div class="input__div">
-                <input type="number" name="height" min="1" max="100" placeholder="Height" id="inputHeight">
-                <input type="number" name="width" min="1" max="100" placeholder="Width" id="inputWidth">
+                <input type="number" name="height" min="1" max="100" placeholder="Height" id="inputHeight" title="Choose Canvas height size."
+                    autofocus>
+                <input type="number" name="width" min="1" max="100" placeholder="Width" id="inputWidth" title="Choose Canvas width size.">
                 <input type="button" value="Submit" id="submitBtn">
-                <input type="reset" value="Clear" id="resetBtn">
+                <!-- <input type="reset" value="Clear" id="resetBtn"> -->
             </div>
             <hr>
             <div class="tools__div">
-                <p class="tools__head">Tools</p>
+                <p class="tools__head" title="Drawing tools">Tools</p>
                 <div class="paint__tools">
-                    <div class="tool eye__droper">
-                        <i class="fas fa-eye-dropper"></i>
-                        <br>Dropper
+                    <div class="tool eraser" title="Select eraser to erase drawing. Left click on the color to erase it or click and hold and move mouse to remove more color at once.">
+                        <i class="fas fa-eraser"></i>
+                        <br>Eraser
                     </div>
-                    <div class="tool paint__brush">
+                    <div class="tool paint__brush" title="Select this brush to paint on the Canvas. Left click and hold to simantaneous paint.">
                         <i class="fas fa-paint-brush"></i>
                         <br>Brush
                     </div>
-                    <div class="tool close">
+                    <div class="tool close" title="Delete the canvas completely!">
                         <i class="fas fa-window-close"></i>
                         <br>Delete
                     </div>
-                    <div class="tool reset">
+                    <div class="tool reset" title="Reset all the drawing on the canvas without deleting the table.">
                         <i class="fas fa-undo"></i>
                         <br>Reset
                     </div>
-                    <div class="tool colorPicker">
+                    <div class="tool colorPicker" title="Choose Color from this Color Picker.">
                         <input type="color" name="Color Picker" id="colorPicker">
                         <br>Colors
                     </div>
+                    
                 </div>
             </div>
         </div>
-        <table id="canvas"></table>
+        <div id="canvas__div">
+            <table id="canvas"></table>
+        </div>
+
+
     </div>
+
+    <!-- Script file  -->
 
     <script src="js/designs.js"></script>
 </body>

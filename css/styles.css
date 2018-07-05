@@ -1,27 +1,33 @@
 body {
     background-image: url("../img/background.jpg");
 }
+
 .container {
     padding: 0px;
     margin: 0px;
 }
+
 h1 {
     font-family: 'Finger Paint', cursive;
-    font-size: 30px;
+    font-size: 40px;
     color: teal;
+    margin-bottom: 0px;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
 }
+
 .input__div {
     width: 100%;
     margin: auto;
 }
+
 hr {
     width: 100%;
     color: teal;
     margin-top: 20px;
 }
+
 .tools {
     width: 90%;
     border: 1px solid teal;
@@ -29,42 +35,49 @@ hr {
     box-shadow: 8px 8px 15px rgb(165, 165, 165);
     padding: 5px;
 }
+
 .tools__head {
     color: teal;
     text-align: center;
     font-size: 22px;
     line-height: 0px;
     font-family: 'Patrick Hand', cursive;
+    display: none;
 }
+
 .paint__tools {
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
     margin-left: 10px;
     font-family: 'Patrick Hand', cursive;
-    
 }
+
 .tool {
     width: 60px;
     color: rgb(99, 99, 99);
 }
+
 #canvas {
-    width: 85%;
     height: auto;
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
-input[type=button], input[type=reset] {
-    padding: 5px;
+
+input[type=button],
+input[type=reset] {
     border: 1px solid teal;
     border-radius: 5px;
-    background-color: teal;
     color: rgb(255, 255, 255);
     font-size: 12px;
     font-weight: normal;
     box-shadow: 5px 5px 15px grey;
+    cursor: pointer;
 }
+
 input[type=number] {
     width: 100px;
-    padding: 5px;
+    padding: 10px;
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
@@ -72,33 +85,57 @@ input[type=number] {
     background-color: rgb(255, 255, 255);
     box-shadow: 5px 5px 15px grey;
 }
-#submitBtn {
-    background-color: green;
+
+table {
+    border-collapse: collapse;
+    box-shadow: 7px 7px 12px grey;
+    background-color: white;
 }
+
+td,
+tr {
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+#submitBtn {
+    background-color: rgb(49, 126, 35);
+    padding: 10px;
+}
+
 #resetBtn {
     background-color: rgb(245, 75, 75);
     border: 1px solid red;
+    padding: 10px;
 }
+
 #heading__hr {
     width: 40%;
 }
+
 .fas {
     font-size: 25px;
     margin: auto;
     text-align: center;
+    cursor: pointer;
+    padding: 3px;
 }
+
 .fa-paint-brush {
     color: blue;
 }
+
 .fa-window-close {
     color: red;
 }
+
 .fa-undo {
     color: red;
 }
-.fa-eye-dropper {
-    color: purple;
-}
+
 li {
     list-style-type: none;
     display: inline-block;
@@ -106,8 +143,10 @@ li {
     padding: 5px;
     margin: auto;
 }
+
 #colorPicker {
-    width: 50px;
+    border-radius: 50%;
+    width: 30px;
     height: 30px;
 }
 
@@ -115,38 +154,75 @@ li {
     position: relative;
     width: 95%;
     margin: auto;
+    
 }
-@media screen and (min-width: 460px) and (max-width: 699px) {
+
+.tools {
+    width: 460px;
+    margin: auto;
+}
+
+.coder__tag {
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0px;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+span {
+    color: red;
+    font-size: 22px;
+}
+
+/* all media queries start from here */
+
+@media screen and (min-width: 360px) and (max-width: 699px) {
     .tools {
-        width: 460px;
+        width: 360px;
         margin: auto;
     }
 }
- @media screen and (min-width: 700px) and (max-width: 1000px) {
-     .tools {
-         width: 650px;
-         margin: auto;
-     }
-     .paint__tools {
-         margin-left: 150px;
-     }
- }
- @media screen and (min-width: 1001px) {
-     h1 {
-         font-size: 50px;
-     }
-     input[type=number], input[type=button] {
-         margin-top: 10px;
-     }
-     .paint__tools {
-         display: flex;
-         flex-direction: column;
-     }
-     .tool {
-         padding: 5px;
-         margin: auto;
-     }
-     .tools {
-         width: 100px;
-     }
- }
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .tools {
+        width: 650px;
+        margin: auto;
+    }
+    .paint__tools {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    h1 {
+        font-size: 50px;
+    }
+    input[type=number],
+    input[type=button] {
+        margin-top: 10px;
+    }
+    .paint__tools {
+        flex-direction: column;
+    }
+    .tool {
+        padding: 5px;
+        margin-left: auto;
+    }
+    .tools {
+        position: absolute;
+        top: 120px;
+        left: 30px;
+        width: 100px;
+        margin-left: 10px;
+        height: auto;
+    }
+    
+    #canvas {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
