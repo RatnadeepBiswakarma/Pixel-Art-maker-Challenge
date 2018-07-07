@@ -43,6 +43,7 @@ $('#inputWidth').on("keydown", function (e) {
 function makeGrid() {
 
   removeTable(); // reset the Grid
+  $("#head__info").css("display", "none");
   $("#instruction__heading").html("New Drawing");
   $("title").html("New Drawing");
   let canvasHeight = $('#inputHeight').val(); // assign input height to canvasHeight variable.
@@ -122,6 +123,7 @@ $('table').on('mousemove', 'td', function () { // color picker function.
 
 $('.close').on("click", function () {
   $("title").html("Pixel Art Maker");
+  $("#head__info").css("display", "");
   $("#instruction__heading").html("Choose Grid Size. (max: 40)");
   // hasTable = false;
   $('#canvas').empty();
