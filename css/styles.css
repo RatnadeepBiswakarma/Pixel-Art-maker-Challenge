@@ -55,6 +55,8 @@ hr {
     text-align: center;
     font-size: 18px;
     font-weight: normal;
+    line-height: 0px;
+    margin-bottom: 0px;
 }
 .tools__head {
     color: teal;
