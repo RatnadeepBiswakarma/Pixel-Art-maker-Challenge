@@ -202,7 +202,12 @@ span {
 }
 
 /* all media queries start from here */
-
+@media screen and (max-width: 359px) {
+    .tools {
+        border: none;
+        box-shadow: none;
+    }
+}
 @media screen and (min-width: 360px) and (max-width: 699px) {
     .tools {
         width: 360px;
@@ -220,6 +225,8 @@ span {
     .tools {
         width: 650px;
         margin: auto;
+        border: none;
+        box-shadow: none;
     }
     .paint__tools {
         margin-left: 150px;
