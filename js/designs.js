@@ -1,7 +1,7 @@
-var meter = document.getElementById("meter");
+const meter = document.getElementById("meter");
 let val = 0;
 
-function foo() {
+function loadingScreen() {
   $(".container").css("visibility", "hidden");
   for (i = 0; i < 1; i++) {
     val = val + 0.1;
@@ -23,10 +23,10 @@ function foo() {
     } else if (val > 60) {
       $('#status__text').html("Let's get Started...");
     }
-    setTimeout(foo, 2);
+    setTimeout(loadingScreen, 2);
   }
 }
-foo();
+loadingScreen();
 
 $('#submitBtn').click(function () {
   makeGrid();
@@ -43,6 +43,8 @@ $('#inputWidth').on("keydown", function (e) {
 function makeGrid() {
 
   removeTable(); // reset the Grid
+  $("#instruction__heading").html("New Drawing");
+  $("title").html("New Drawing");
   let canvasHeight = $('#inputHeight').val(); // assign input height to canvasHeight variable.
   let canvasWidth = $('#inputWidth').val(); // asssign input width to canvasWidth variable.
   if ((canvasHeight != "") && (canvasWidth != "")) {
@@ -119,7 +121,9 @@ $('table').on('mousemove', 'td', function () { // color picker function.
 //  delete table function 
 
 $('.close').on("click", function () {
-  hasTable = false;
+  $("title").html("Pixel Art Maker");
+  $("#instruction__heading").html("Choose Grid Size. (max: 40)");
+  // hasTable = false;
   $('#canvas').empty();
   $('.input__div').css("display", "");
   $('.tools').css("display", "none");
