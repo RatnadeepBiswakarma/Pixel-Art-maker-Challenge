@@ -1,3 +1,32 @@
+var meter = document.getElementById("meter");
+let val = 0;
+
+function foo() {
+  $(".container").css("visibility", "hidden");
+  for (i = 0; i < 1; i++) {
+    val = val + 0.1;
+    meter.setAttribute("value", val);
+  }
+  if (val >= 70) {
+    $(".loading").css("display", "none");
+    $(".container").css("visibility", "visible");
+
+  } else {
+    if (val > 20 && val < 29) {
+      $('#status__text').html("Loading Colors...");
+    } else if (val > 30 && val < 39) {
+      $('#status__text').html("Loading Assets...");
+    } else if (val > 40 && val < 49) {
+      $('#status__text').html("Loading Tools...");
+    } else if (val > 50 && val < 59) {
+      $('#status__text').html("Almost Done...");
+    } else if (val > 60) {
+      $('#status__text').html("Let's get Started...");
+    }
+    setTimeout(foo, 2);
+  }
+}
+foo();
 
 $('#submitBtn').click(function () {
   makeGrid();
@@ -87,13 +116,6 @@ $('table').on('mousemove', 'td', function () { // color picker function.
   }
 });
 
-//           color reset function 
-// function resetColor() {
-//   $('td').css({
-//     "background-color": ""
-//   });
-// }
-
 //  delete table function 
 
 $('.close').on("click", function () {
@@ -109,5 +131,4 @@ $('.reset').on("click", function () {
   $('td').css("background-color", "");
 })
 
-// event listener for enter key to trigger the submit button 
-
+// event listener for enter key to trigger the submit button

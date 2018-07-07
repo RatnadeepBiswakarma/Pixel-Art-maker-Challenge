@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,13 @@
 </head>
 
 <body>
+    <!-- Loader section start here -->
+    <div class="loading">
+        <p id="status__text">Loading Pixel Art...</p>
+        <meter id="meter" value="0" min="0" max="100"></meter>
+    </div>
+
+    <!-- Loader section start here -->
     <div class="container">
         <h1 class="name" title="Pixel Art Maker porject by Ratnadeep Biswakarma.">Pixel Art Maker</h1>
         <hr class="heading__hr">
@@ -29,7 +37,7 @@
             <input type="number" name="width" min="1" max="100" placeholder="Width" id="inputWidth" title="Choose Canvas width size.">
             <input type="button" value="Submit" id="submitBtn">
         </div>
-        <div class="tools">           
+        <div class="tools">
             <hr id="divider">
             <div class="tools__div">
                 <p class="tools__head" title="Drawing tools">Tools</p>
@@ -54,7 +62,7 @@
                         <input type="color" name="Color Picker" id="colorPicker">
                         <br>Colors
                     </div>
-                    
+
                 </div>
             </div>
         </div>
