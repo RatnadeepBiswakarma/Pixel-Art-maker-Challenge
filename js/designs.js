@@ -47,7 +47,7 @@ function makeGrid() {
   $("#instruction__heading").html("New Drawing");
   $("title").html("New Drawing");
   let canvasHeight = $('#inputHeight').val(); // assign input height to canvasHeight variable.
-  let canvasWidth = $('#inputWidth').val(); // asssign input width to canvasWidth variable.
+  let canvasWidth = $('#inputWidth').val(); // assign input width to canvasWidth variable.
   if ((canvasHeight != "") && (canvasWidth != "")) {
     $('.input__div').css("display", "none");
     $('.tools').css("display", "initial");
