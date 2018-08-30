@@ -13,7 +13,7 @@
  * On next page Choose color and select brush to paint.
  * Click or click and drag mouse to paint.
  * To return from or choose a new table size simply click on _*Delete*_ icon.
- # Language Used
+ # Languages and Dependencies
  * **HTML5**
  * **CSS3**
  * **JavaScript**
